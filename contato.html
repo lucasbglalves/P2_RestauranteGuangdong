@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo a codificação de caracteres para UTF-8, essencial para garantir a exibição correta de caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configuração para tornar a página responsiva, ajustando-a para diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Contato - Restaurante Guangdong</title>
+    
+    <!-- Incluindo o Bootstrap 4 via CDN (para estilização e componentes) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Estilizando o fundo da página com um tom de vermelho */
+        body {
+            background-color:  rgba(177, 34, 34, 0.623);
+        }
+
+        /* Garantindo que o conteúdo ocupe 100% da altura da tela */
+        body, html {
+            height: 100%;
+        }
+
+        /* Estilo do rodapé (footer) com cor de fundo vermelha e texto amarelo */
+        .footer {
+            background-color: #ff0000;
+            color: rgb(204, 204, 0);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Flexbox para garantir que o rodapé fique no final da página, mesmo que o conteúdo seja curto */
+        .content {
+            min-height: 80vh; /* Garantir que a seção de conteúdo tenha pelo menos 80% da altura da tela */
+            display: flex;
+            flex-direction: column; /* Alinha os itens na direção vertical */
+        }
+
+        /* Esta classe permite que o conteúdo principal ocupe o espaço restante da página */
+        .main-content {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegação (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <!-- Nome do restaurante e link de navegação para a página inicial -->
+            <a class="navbar-brand" href="index.html">Restaurante Guangdong</a>
+            <!-- Botão do menu para dispositivos móveis -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Ícone de menu hamburguer -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Itens de navegação -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a> <!-- Link para a página inicial -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cardapio.html">Cardápio</a> <!-- Link para a página do cardápio -->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contato.html">Contato</a> <!-- Link para a página de contato -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Contato -->
+    <div class="container mt-5 content">
+        <!-- Título da seção -->
+        <h2 class="text-center">Entre em Contato Conosco</h2>
+
+        <!-- Formulário de contato -->
+        <form action="#" method="POST" class="mt-4">
+            <div class="form-row">
+                <!-- Campo de Nome -->
+                <div class="form-group col-md-6">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <!-- Campo de E-mail -->
+                <div class="form-group col-md-6">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <!-- Campo de Telefone (opcional) -->
+                <div class="form-group col-md-6">
+                    <label for="telefone">Telefone (opcional)</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone">
+                </div>
+            </div>
+
+            <!-- Campo de Mensagem -->
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem"
+                    required></textarea>
+            </div>
+
+            <!-- Botão de Enviar -->
+            <button type="submit" class="btn btn-warning">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="footer">
+        <!-- Texto no rodapé com informações de copyright -->
+        <p>&copy; 2024 Restaurante Guangdong | Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Inclusão dos scripts necessários para o funcionamento do Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> <!-- Biblioteca jQuery slim -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> <!-- Popper.js, necessário para o Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!-- Script do Bootstrap -->
+</body>
+
+</html>

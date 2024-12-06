@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo a codificação de caracteres para UTF-8, importante para exibir caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Definindo a visualização em dispositivos móveis com ajuste de largura -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Restaurante Guangdong</title>
+    
+    <!-- Incluindo o arquivo CSS do Bootstrap 4 via CDN (para estilização da página) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Estilizando o fundo do body para uma cor vermelha transparente */
+        body {
+           background-color: rgba(177, 34, 34, 0.623);
+        }
+
+        /* Estilo da seção hero (imagem de fundo com texto) */
+        .hero {
+            background-image: url('https://s2.glbimg.com/4ugf4Nx5FvW6fcHAIwSfG8b50dk=/smart/e.glbimg.com/og/ed/f/original/2021/03/12/fotos-revelam-lado-pouco-conhecido-da-cidade_proibida_3.jpg');
+            background-size: cover; /* Faz com que a imagem de fundo cubra toda a área */
+            background-position: center; /* Centraliza a imagem */
+            color: rgb(255, 255, 0); /* Cor do texto em amarelo */
+            padding: 100px 0; /* Espaçamento interno na parte superior e inferior */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        /* Estilo do rodapé (footer) com fundo vermelho e texto em amarelo */
+        .footer {
+            background-color: #ff0000; /* Cor de fundo vermelha */
+            color: rgb(204, 204, 0); /* Cor do texto em amarelo */
+            padding: 20px 0; /* Espaçamento interno do rodapé */
+            text-align: center; /* Centraliza o texto do rodapé */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (barra de navegação) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <!-- Nome do restaurante e link de navegação para a página inicial -->
+            <a class="navbar-brand" href="#">Restaurante Guangdong</a>
+            <!-- Botão de menu para dispositivos móveis -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Ícone de menu hamburguer -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Itens de navegação -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Início</a> <!-- Link para a página inicial -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cardapio.html">Cardápio</a> <!-- Link para a página do cardápio -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a> <!-- Link para a página de contato -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero (imagem de fundo com uma introdução) -->
+    <header class="hero">
+        <div class="container">
+            <!-- Título principal da seção -->
+            <h1>Bem-vindo ao Restaurante Guangdong</h1>
+            <!-- Subtítulo com uma breve descrição -->
+            <h2>A culinária cantonesa perto de você!</h2>
+            <!-- Parágrafo explicativo sobre o restaurante -->
+            <p>Oferecemos uma autêntica experiência cantonesa com deliciosos bolinhos, preparados com ingredientes frescos em um ambiente acolhedor.</p>
+        </div>
+    </header>
+
+    <!-- Seção de Horários de Funcionamento -->
+    <div class="container mt-5">
+        <h2 class="text-center">Horários de Funcionamento</h2>
+        <table class="table table-bordered mt-4">
+            <!-- Cabeçalho da tabela com os dias e horários -->
+            <thead>
+                <tr>
+                    <th class="text-center">Dia</th>
+                    <th class="text-center">Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas da tabela com os dias da semana e os horários -->
+                <tr>
+                    <td class="text-center">Segunda-feira</td>
+                    <td class="text-center">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Terça-feira</td>
+                    <td class="text-center">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Quarta-feira</td>
+                    <td class="text-center">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Quinta-feira</td>
+                    <td class="text-center">10:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Sexta-feira</td>
+                    <td class="text-center">10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Sábado</td>
+                    <td class="text-center">10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Domingo</td>
+                    <td class="text-center">Fechado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="footer">
+        <!-- Texto no rodapé com informações de copyright -->
+        <p>&copy; 2024 Restaurante Guangdong | Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Inclusão dos scripts necessários para o funcionamento do Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> <!-- Biblioteca jQuery slim -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> <!-- Popper.js, necessário para o Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!-- Script do Bootstrap -->
+</body>
+
+</html>
+

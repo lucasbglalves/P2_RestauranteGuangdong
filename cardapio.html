@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo a codificação de caracteres para UTF-8, para garantir a exibição correta de caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Configuração para tornar a página responsiva, ajustando-a para diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Cardápio - Restaurante Guangdong</title>
+    
+    <!-- Incluindo o Bootstrap 4 via CDN para usar estilos prontos e componentes -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Estilizando o fundo da página com uma tonalidade de vermelho */
+        body {
+           background-color: rgba(177, 34, 34, 0.623);
+        }
+
+        /* Estilo para as imagens do cardápio (garante que a imagem ocupe 100% da largura e ajuste automaticamente a altura) */
+        .cardapio-img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilo do rodapé (footer) */
+        .footer {
+            position: fixed; /* Fixando o rodapé na parte inferior da tela */
+            bottom: 0; /* Alinhando o rodapé ao fundo da tela */
+            background-color: #ff0000; /* Cor de fundo vermelha */
+            color: rgb(204, 204, 0); /* Cor do texto em amarelo */
+            padding: 20px 0; /* Adicionando espaçamento no rodapé */
+            text-align: center; /* Centralizando o texto */
+            width: 100%; /* Garantindo que o rodapé ocupe toda a largura da tela */
+        }
+
+        /* Flexbox para garantir que o conteúdo tenha uma altura mínima e empurre o rodapé para baixo */
+        .content {
+            min-height: 80vh; /* Garantir que a área de conteúdo ocupe pelo menos 80% da altura da tela */
+            display: flex;
+            flex-direction: column; /* Organizando o conteúdo em uma direção vertical */
+        }
+
+        /* Flexbox para garantir que o conteúdo principal ocupe o espaço restante disponível */
+        .main-content {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (barra de navegação) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <!-- Nome do restaurante e link de navegação para a página inicial -->
+            <a class="navbar-brand" href="index.html">Restaurante Guangdong</a>
+            <!-- Botão do menu para dispositivos móveis -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Ícone de menu hamburguer -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Itens de navegação -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a> <!-- Link para a página inicial -->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cardapio.html">Cardápio</a> <!-- Link para a página do cardápio (destacado com a classe 'active') -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a> <!-- Link para a página de contato -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção do Cardápio -->
+    <div class="container mt-5">
+        <!-- Título da seção do cardápio -->
+        <h2 class="text-center">Nosso Cardápio</h2>
+        
+        <!-- Utilizando o sistema de grid do Bootstrap para organizar os itens do cardápio -->
+        <div class="row mt-4">
+            <!-- Coluna para o primeiro item do cardápio -->
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- Imagem do prato (aplicando a classe cardapio-img para estilizar) -->
+                    <img src="img/dumpling.jpeg" class="card-img-top cardapio-img" alt="Prato 1">
+                    <div class="card-body">
+                        <!-- Título do prato -->
+                        <h5 class="card-title">Guioza/Dumpling</h5>
+                        <!-- Descrição do prato -->
+                        <p class="card-text">Bolinho com recheio de carne moída.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coluna para o segundo item do cardápio -->
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- Imagem do prato (aplicando a classe cardapio-img para estilizar) -->
+                    <img src="img\dimsum.jpeg" class="card-img-top cardapio-img" alt="Prato 2">
+                    <div class="card-body">
+                        <!-- Título do prato -->
+                        <h5 class="card-title">Dim Sum</h5>
+                        <!-- Descrição do prato -->
+                        <p class="card-text">Bolinho com recheio de camarão</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coluna para o terceiro item do cardápio -->
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- Imagem do prato (aplicando a classe cardapio-img para estilizar) -->
+                    <img src="img/mooncake.jpg" class="card-img-top cardapio-img" alt="Prato 3">
+                    <div class="card-body">
+                        <!-- Título do prato -->
+                        <h5 class="card-title">Bolinho de Lua</h5>
+                        <!-- Descrição do prato -->
+                        <p class="card-text">Sobremesa recheada de castanhas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé (footer) -->
+    <footer class="footer">
+        <!-- Texto no rodapé com informações de copyright -->
+        <p>&copy; 2024 Restaurante Guangdong | Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Inclusão dos scripts necessários para o funcionamento do Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> <!-- Biblioteca jQuery slim -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> <!-- Popper.js, necessário para o Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!-- Script do Bootstrap -->
+</body>
+
+</html>
+
